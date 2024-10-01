@@ -1,0 +1,10 @@
+node_modules/
+.npmignore
+.env
+.vscode/
+.dist/
+
+# builds
+/ripple.js
+/ripple.d.ts
+/ripple.css

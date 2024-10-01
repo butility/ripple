@@ -1,0 +1,24 @@
+{
+  "name": "@butility/ripple",
+  "version": "1.0.0",
+  "main": "ripple.js",
+  "type": "module",
+  "scripts": {
+    "build:types": "tsc --declaration --allowJs --emitDeclarationOnly ripple.js",
+    "build": "esbuild src/index.js --bundle --outfile=ripple.js --format=esm",
+    "format": "prettier --write src/**/*.js"
+  },
+  "keywords": [
+    "butility",
+    "ripple"
+  ],
+  "author": "Ermiyas Arage <ermiyasarage2023@gmail.com>",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@butility/dom": "^1.0.0",
+    "@butility/style": "^1.0.3",
+    "esbuild": "^0.24.0",
+    "prettier": "^3.3.3"
+  }
+}

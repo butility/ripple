@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Ripple Effect</title>
+    <link rel="stylesheet" href="../ripple.css">
+    <style>
+        /* Custom styles for advanced ripple button */
+        .ripple-advanced-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .custom-ripple {
+            background-color: rgba(0, 150, 136, 0.5);  /* Override ripple color */
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced Ripple Effect with Custom Options</h1>
+    <button id="advanced-button" class="ripple-advanced-button">Advanced Ripple</button>
+
+    <script>
+        import { customRipple } from "../ripple.js"
+        // Using the customRipple function to create a highly customized ripple effect
+        const advancedButton = document.getElementById('advanced-button');
+        
+        customRipple(advancedButton, {
+            rippleColor: 'rgba(0, 150, 136, 0.5)',  // Custom green color
+            rippleDuration: 1000,                  // Slower animation (1s)
+            customClass: 'custom-ripple',          // Apply a custom class to override CSS
+            enableDamping: true,
+            dampingFactor: 0.6
+        });
+    </script>
+</body>
+</html>
